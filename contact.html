@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title> BENEFIT OF EDUCATION</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">		
+		<!-- link to external js file-->
+		<script type="text/javascript" src="external.js"></script>
 		<!-- link your style sheet underneath the bootstrap-->
 		<link rel="stylesheet" href="myStyle.css">
 		<!--this is to link it to the css stylesheet-->
@@ -34,28 +36,161 @@
 			<h4>Books for further reading</h4>
 		</div>
 		
+		<br>
+		
 		
 		<div class="container text-center">
 			<div class="row">
 				<div class="col-sm-4">
 					<h5>INFO</h5>
+					<p>
+					This section is specifically for the purpose of suggesting further reading, we will be recommending some of the most famous authors over the course of history, from the ancient era to the modern. It will be full of various different topics ranging from philosophy, novels, history and many more. Make sure to click on the name of the authors to find out the title of one of their most famous books.
+
+					</p>
 				
 				</div>
 				<div class="col-sm-4">
-					<h5>STATS</h5>
-				
+					<h5>Ancient authors</h5>
+					<p id="aa1" onclick="bookAA1()">
+						Marcus Aurelius
+					</p> 
+					<br>	
+					<p id ="aa2" onclick="bookAA2()">
+						Plato
+					</p>
+					<br>
+					<p id="aa3" onclick="bookAA3()">
+						Seneca
+					</p>
+					<br>
+					<p id="aa4" onclick="bookAA4()">
+						Homer
+					</p>
+					<br>				
 				</div>
 				<div class="col-sm-4">
-					<h5>OTHER</h5>
+					<h5>Modern authors</h5>
+					<p id="ma1" onclick="bookMA1()">
+						Leo Tolstoy
+					</p>
+					<br>	
+					<p id ="ma2" onclick="bookMA2()">
+						James Joyce
+					</p>
+					<br>
+					<p id="ma3" onclick="bookMA3()">
+						F.Scott Fitzgerald
+					</p>
+					<br>
+					<p id="ma4" onclick="bookMA4()">
+						William Shakespeare
+					</p>
+					<br>	
+					<br>
 				<div>
 			
 			</div>
+			<br>
+			<br>
+			<br>
 		</div>
+		
+		
+
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-sm-6">
+					<h5>How you can make a difference!</h5>
+					<p>
+					Here at the Benefit of Education organisation, we try to impact as many people's lives possible. We try to spread the positives of education all across the globe and try provide the resources for education to areas not as fortunate as ours. You can also make an impact, use the contact form to leave your details and one of our team members will contact you on how you can make an impact. There a different ways to help, by volunteering, donating books or even providing free tutoring online!
+					</P>
+				
+				</div>
+				<div class="col-sm-6">
+					<h5>Contact Form</h5>
+					<form id="contact-form">
+						<label for="name">Name:</label><br>
+						<input type="text" id="name" name="name"><br>
+						<label for="telephone">Phone number:</label><br>
+						<input type="text" id="telephone" name="telephone"><br>
+						<label for="age">Age:</label><br>
+						<input type="text" id="age" name="age"><br>
+						<label for="email">Email:</label><br>
+						<input type="text" id="email" name="email"><br>
+						<input type="radio" id="male" name="gender" value="MALE">
+						<label for="male">Male</label><br>
+						<input type="radio" id="female" name="gender" value="FEMALE">
+						<label for="female">Female</label><br>						
+						<input type="submit" value="Submit">
+					
+					
+					</form>
+					<script> document.addEventListener("DOMContentLoaded", function(){
+
+						const form=document.querySelector("form");
+						form.addEventListener("submit", function(e){
+						e.preventDefault();
+						const name = document.querySelector("input[name='name']").value;
+						const telephone = document.querySelector("input[name='telephone']").value;						
+						const age = document.querySelector("input[name='age']").value;
+						const email = document.querySelector("input[name='email']").value;
+
+
+						const genderMale = document.getElementById("male").checked;
+						const genderFemale = document.getElementById("female").checked;
+						
+						let valid = true;
+						let messages ="";
+
+						if(telephone.length !== 10 || isNaN(telephone)){
+							messages += "Phone number must be a 10 digit number.\n";
+							valid = false;
+							}
+							
+						if(!email.includes('@') || !email.includes('.')){
+							messages += "Email must include '@' and '.'\n";
+							valid = false;
+							}
+						
+						if((parseInt(age)) <18) {
+							messages += "You must be over 18 to sign up to volunteer\n";
+							valid =false;
+							}
+							
+						if(!genderMale && !genderFemale){
+							messages += "You must check a box\n";
+							valid = false
+							}
+						
+						if(name==""){
+							messages += "You must enter a name";
+							valid = false
+							}
+						
+						if (!valid){
+							alert("Data is not valid: \n " + messages);
+							}
+						else {
+							alert("Form submitted succesfully");
+							}
+							
+							
+						
+						
+						
+						
+						});
+					});
+					</script>
+				
+				</div>
+			
+			</div>
+		</div>	
 	
 	
 	
-	
-	
+	<!--last thing before closing the body tag-->	
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 	</body>
 </html>
