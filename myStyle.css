@@ -1,1 +1,65 @@
-//change buttons on each page
+body{
+	background-color: #f9f9f9;
+	font-family: Arial;
+	line-height: 1.6;
+	padding: 20px;
+	color: #333
+
+}
+
+h1{
+	color: #2c3e50;
+	margin-bottom: 15px;
+}
+
+h3{
+	color: #5e8bb8;
+	margin-bottom: 15px;
+}
+
+h5{
+	color: #034f9c;
+	margin-bottom: 15px;
+}
+
+input[type="button"] {
+  background-color: #2980b9;   
+	color: white;                 
+	padding: 10px 20px;           
+	border-color: white;                
+	font-size: 16px; 
+}
+
+button{
+	background-color: #2980b9;   
+	color: white;                 
+	padding: 10px 20px;           
+	border-color: white;                 
+	font-size: 16px; 
+}
+
+input[type="submit"]{
+	 background-color: #2980b9;   
+	color: white;                 
+	padding: 10px 20px;           
+	border-color: white;                 
+	font-size: 16px; 
+}
+
+.col-sm-4 {
+	background-color: #abd5ff;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+}
+
+.col-sm-6 {
+	background-color: #abd5ff;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+}
+
+
+
+
