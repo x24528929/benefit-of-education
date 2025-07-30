@@ -44,46 +44,47 @@
 				<div class="col-sm-4">
 					<h5>INFO</h5>
 					<p>
-					This section is specifically for the purpose of suggesting further reading, we will be recommending some of the most famous authors over the course of history, from the ancient era to the modern. It will be full of various different topics ranging from philosophy, novels, history and many more. Make sure to click on the name of the authors to find out the title of one of their most famous books.
-
+					This section is specifically for the purpose of suggesting further reading, we will be recommending some of the most famous authors over the course of history, from the ancient era to the modern. It will be full of various different topics ranging from philosophy, novels, history and many more. 
 					</p>
-				
+					<p> 
+					Make sure to click on the name of the authors to find out the title of one of their most famous books.
+					</p>
 				</div>
 				<div class="col-sm-4">
 					<h5>Ancient authors</h5>
 					<p id="aa1" onclick="bookAA1()">
-						Marcus Aurelius
+						•Marcus Aurelius
 					</p> 
 					<br>	
 					<p id ="aa2" onclick="bookAA2()">
-						Plato
+						•Plato
 					</p>
 					<br>
 					<p id="aa3" onclick="bookAA3()">
-						Seneca
+						•Seneca
 					</p>
 					<br>
 					<p id="aa4" onclick="bookAA4()">
-						Homer
+						•Homer
 					</p>
 					<br>				
 				</div>
 				<div class="col-sm-4">
 					<h5>Modern authors</h5>
 					<p id="ma1" onclick="bookMA1()">
-						Leo Tolstoy
+						•Leo Tolstoy
 					</p>
 					<br>	
 					<p id ="ma2" onclick="bookMA2()">
-						James Joyce
+						•James Joyce
 					</p>
 					<br>
 					<p id="ma3" onclick="bookMA3()">
-						F.Scott Fitzgerald
+						•F.Scott Fitzgerald
 					</p>
 					<br>
 					<p id="ma4" onclick="bookMA4()">
-						William Shakespeare
+						•William Shakespeare
 					</p>
 					<br>	
 					<br>
@@ -152,7 +153,7 @@
 							valid = false;
 							}
 						
-						if((parseInt(age)) <18) {
+						if((parseInt(age)) <18 || isNaN(age)) {
 							messages += "You must be over 18 to sign up to volunteer\n";
 							valid =false;
 							}

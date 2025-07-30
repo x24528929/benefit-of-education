@@ -14,36 +14,74 @@ function stat3(){
 
 //functions to manipulate the DOM on the contact page
 function bookAA1(){
-	document.getElementById('aa1').innerHTML = "Meditations";
+	document.getElementById('aa1').innerHTML = "•Meditations";
 }
 
 function bookAA2(){
-	document.getElementById('aa2').innerHTML = "The Republic";
+	document.getElementById('aa2').innerHTML = "•The Republic";
 }
 
 function bookAA3(){
-	document.getElementById('aa3').innerHTML = "Letters to Lucilius";
+	document.getElementById('aa3').innerHTML = "•Letters to Lucilius";
 }
 
 function bookAA4(){
-	document.getElementById('aa4').innerHTML = "The Illiad and the Odyssey";
+	document.getElementById('aa4').innerHTML = "•The Illiad and the Odyssey";
 }
 
 function bookMA1(){
-	document.getElementById('ma1').innerHTML = "War and Peace";
+	document.getElementById('ma1').innerHTML = "•War and Peace";
 }
 
 function bookMA2(){
-	document.getElementById('ma2').innerHTML = "Ulysses";
+	document.getElementById('ma2').innerHTML = "•Ulysses";
 }
 
 function bookMA3(){
-	document.getElementById('ma3').innerHTML = "The Great Gatsby";
+	document.getElementById('ma3').innerHTML = "•The Great Gatsby";
 }
 
 function bookMA4(){
-	document.getElementById('ma4').innerHTML = "Macbeth";
+	document.getElementById('ma4').innerHTML = "•Macbeth";
 }
+
+//functions to manipulate the DOM on gallery, changing image to text and then on mouse out back to old image
+
+
+function setNewText1(){
+	document.getElementById("debate").src = "malcom.jpg";
+}
+
+function setOldIMG1(){
+	document.getElementById("debate").src = "debate.jpg";
+}
+
+function setNewText2(){
+	document.getElementById("father").src = "family.jpg";
+}
+
+function setOldIMG2(){
+	document.getElementById("father").src = "father.jpg";
+}
+
+//function for minigame
+function checkGuess(){
+	let randomNumber = Math.floor(Math.random()*10) +1;
+	const userGuess = parseInt(document.getElementById("guess").value);
+	
+	if(userGuess == randomNumber){
+		alert("Correct you guessed the right number!");
+	}
+	else {
+		alert("Incorrect, you guessed the wrong number! The right number was " + randomNumber);
+	}
+}
+
+//function to change image to text on about page
+function changeIMG(){
+	document.getElementById("img1Container").innerHTML = "Communities can give people a sense of belonging. \n It also gives people a support system, so you can rely on someone. \n People in communities often share their knowledge, wisdom and experiences hoping to help others. \n They also give you a wide range of diverse perspectives.";
+}
+
 
 
 
